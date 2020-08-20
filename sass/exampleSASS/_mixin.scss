@@ -1,0 +1,60 @@
+$bg-color-content-1: #f1afaf;
+$txt-color-content-1: #554c4c;
+$bg-color-content-2: #ec7474;
+$txt-color-content-2: #ffffff;
+$bg-color-content-3: #f7f7ae;
+$txt-color-content-3: #2c0401;
+
+@mixin box-size($box-width, $box-height, $box-bordered) {
+    width: $box-width;
+    height: $box-height;
+    border-radius: $box-bordered;
+}
+
+@mixin color($box-bg-color, $box-txt-color) {
+    background-color: $box-bg-color;
+    color: $box-txt-color;
+}
+
+@mixin position($top, $right, $bottom, $left) {
+    margin-top: $top;
+    margin-right: $right;
+    margin-bottom: $bottom;
+    margin-left: $left;
+}
+
+@mixin content($box-font-size, $box-font-weight) {
+    font-size: $box-font-size;
+    font-weight: $box-font-weight;
+}
+
+.box-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    div{
+        margin: 0 50px;
+        p{
+            text-align: center;
+        }
+    }
+    .box-content-1{
+        @include box-size(150px, 100px, 20px );
+        @include color($bg-color-content-1, $txt-color-content-1);
+        @include content(18px, 600);
+        
+    }
+    .box-content-2{
+        @include box-size(300px, 150px, 10px );
+        @include color($bg-color-content-2, $txt-color-content-2);
+        @include position(-30px, 0, 0, 0);
+        @include content(25px, 700);
+    }
+    .box-content-3{
+        @include box-size(120px, 70px, 40px );
+        @include color($bg-color-content-3, $txt-color-content-3);
+        @include content(20px, bold);
+    }
+}
+
+

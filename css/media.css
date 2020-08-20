@@ -1,0 +1,196 @@
+
+@media (max-width: 1110px){
+    nav ul{
+        position: fixed;
+        left: -100%;
+        background-color: rgb(59, 59, 59);
+        width: 40%;
+        height: 100vh;
+        transition: all 0.5s;
+        z-index: 2;
+    }
+    nav ul li{
+        display: block;
+        text-align: center;
+        line-height: 80px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    label{
+        margin-right: 10px;
+    }
+    label #btn-bar{
+        display: block;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    #check:checked ~ nav{
+        position: fixed;
+        top: 0;
+    }
+    #check:checked ~ label #btn-bar{
+        display: none;
+    }
+    #check:checked ~ label #btn-cancel{
+        display: block;
+    }
+    .btn-ticket{
+        display: none;
+    }
+}
+@media (max-width: 996px){
+    .header-left-content p{
+        margin-top: 30%; 
+    }
+    .schedule-tab .st-content .sc-text h4{
+        margin-top: 60px;
+    }
+    .price-item-special{
+        margin-top: 50px;
+    }
+    .about-right-content h1{
+        text-align: center;
+    }
+    .speaker-item .si-text{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 800px){
+    nav img{
+        margin-left: 5%;
+    }
+    .header-left-content p{
+        margin-top: 20%;
+    }
+    .header-left-content h1{
+        font-size: 40px;
+    }
+    .member{
+        float: none;
+    }
+}
+@media (max-width: 650px){
+    .newslatter-inner {
+        padding: 20px;
+    }
+    .nav-admin-page .nav-center a{
+        display: none;
+    }
+    .schedule-table-tab .nav-tabs .nav-item {
+        width: 20%;
+    }
+}
+@media (max-width: 530px){
+    .nav-admin-page .nav-center{
+        display: none;
+    }
+}
+@media (max-width: 400px){
+    nav img{
+        margin-left: 5%;
+    }
+    .btn-ticket{
+        display: none;
+    }
+    .nav-admin-page .nav-notification{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .member-item {
+		width: 25%;
+		height: 310px;
+    }
+    
+    .newslatter-inner .ni-form {
+		align-items: center;
+	}
+}
+@media only screen and (min-width: 768px) and (max-width: 991px){
+    .member-item {
+		width: 33.3%;
+
+	}
+}
+@media only screen and (max-width: 767px){
+    .member-item {
+        width: 50%;
+        height: 100%;
+    }
+    .member-item img{
+        width: 100%;
+        margin: 0;
+    }
+    .newslatter-inner {
+		padding: 60px 50px 48px;
+	}
+	.newslatter-inner .ni-form {
+		width: 350px;
+	}
+	.footer-text ul li {
+		margin-right: 15px;
+	}
+}
+@media only screen and (max-width: 479px){
+    .member-item {
+		width: 100%;
+    }
+    .member-item img{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .newslatter-inner {
+        padding: 10px;
+    }
+    .newslatter-inner .ni-form {
+		width: 100%;
+	}
+	.newslatter-inner .ni-form button {
+		width: 95px;
+	}
+	.newslatter-inner .ni-form input {
+		padding-right: 100px;
+    }
+    
+}
+
+/* @media screen and (max-width: 600px) {
+    table {
+        border: 0;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+        border-bottom: 3px solid #ddd;
+        margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  } */

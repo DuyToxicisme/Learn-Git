@@ -1,0 +1,22 @@
+// Lastest News
+@mixin latest-item-size($height) {
+	height: $height;
+}
+@mixin li-text-size($font-size, $font-weight, $color) {
+	font-size: $font-size;
+	font-weight: $font-weight;
+	color: $color;
+}
+@mixin li-text-position($top, $right, $bottom, $left) {
+	top: $top;
+	right:$right ;
+	bottom: $bottom;
+	left: $left;
+}
+@mixin li-text-location($mg-top, $mg-right, $mg-bottom, $mg-left) {
+	margin-top: $mg-top;
+	margin-right:$mg-right ;
+	margin-bottom: $mg-bottom;
+	margin-left: $mg-left;
+}
+

@@ -1,0 +1,32 @@
+.breadcrumb-section {
+    padding: 60px 0;
+    .breadcrumb-text {
+        text-align: center;
+        h2 {
+            font-size: 36px;
+            color: $color_text_black;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+        .bt-option{
+            a {
+                color: $color_paragraph;
+                display: inline-block;
+                margin-right: 25px;
+                position: relative;
+                &:after {
+                    position: absolute;
+                    right: -17px;
+                    top: 2px;
+                    content: ">";
+                }
+            }
+            span {
+                font-size: 15px;
+                display: inline-block;
+                color: $color_paragraph;
+            }
+        } 
+    }
+    
+}

@@ -7,39 +7,45 @@
     <title>Manup</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
-</head>
 
-<body>
+</head>
+<body onload="showEvents(); showInformationSpeakers();">
+    <include src="adminPage.html"></include>
+    <div class="loading_bg">
+        <div id="loading">
+        </div>
+    </div>
     <header>
-        <nav>
+        <nav class="top-nav">
             <input type="checkbox" id="check">
             <label for="check">
                 <i class="fas fa-bars" id="btn-bar"></i>
                 <i class="far fa-window-close" id="btn-cancel"></i>
             </label>
-            <a href="index.html"><img src="images/logo.png" alt=""></a>
-
-
+            <a href="index.html"><img src="images/logo.png" alt="logo"></a>
             <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Speakers</a></li>
-                <li><a href="#">Schedule</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contact</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="components/about-us.html">About</a>
+            
+                </li>
+                <li><a href="components/speakers.html">Speakers</a></li>
+                <li><a href="components/schedule.html">Schedule</a></li>
+                <li><a href="components/blog.html">Blog</a></li>
+                <li><a href="components/contact.html">Contact</a></li>
             </ul>
             <div class="clear">
             </div>
         </nav>
-        <a href="buy_ticket.html" class="primary-btn btn-ticket"><i class="fas fa-ticket-alt"></i>Ticket</a>
+        <a href="components/buy_ticket.html" class="primary-btn btn-ticket"><i class="fas fa-ticket-alt"></i>Ticket</a>
         <button onclick="topFunction()" id="btn-move-top" title="Go to top">
             <i class="fas fa-arrow-up"></i>
         </button>
-        </div>
-        <div class="header-content">
+        <div class="header-content" style="background-image: url(images/hero.jpg);">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-12 header-left-content">
@@ -47,55 +53,71 @@
                         <h1>Change Your Mind
                             To Become Sucess</h1>
                         <div class="btn-buy-ticket">
-                            <a href="">Buy Ticket</a>
+                            <a href="components/buy_ticket.html">Buy Ticket</a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-12 mx-auto">
-                        <img src="images/hero-right.png" alt="" style="width:80% ;">
+                        <img src="images/hero-right.png" alt="hero-right" style="width:80% ;">
                     </div>
                 </div>
             </div>
         </div>
 
     </header>
+    
     <section class="counter-section">
         <div class="container">
             <div class="row">
-                <div class="col-xl-5 col-lg-12 col-md-12">
+                <div class="col-xl-5 col-lg-12">
                     <div class="counter-text">
                         <span>Conference Date</span>
                         <h3>Count Every Second <br>Until the Event</h3>
                     </div>
                 </div>
-                <div class="col-xl-7 col-lg-10 col-md-12">
+                <div class="col-xl-7 col-lg-10">
                     <div class="cd-timer" id="countdown">
-                        <div class="cd-item">
-                            <span id="day"></span>
-                            <p>Days</p>
-                        </div>
-                        <div class="cd-item">
-                            <span id="hours"></span>
-                            <p>Hrs</p>
-                        </div>
-                        <div class="cd-item">
-                            <span id="minutes"></span>
-                            <p>Mins</p>
-                        </div>
-                        <div class="cd-item">
-                            <span id="seconds"></span>
-                            <p>Secs</p>
+
+                        <div class="container">
+                            <div class="row mx-auto">
+                                <div class="col-md-3 col-6 mx-auto">
+                                    <div class="cd-item">
+                                        <span id="day"></span>
+                                        <p>Days</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="cd-item">
+                                        <span id="hours"></span>
+                                        <p>Hrs</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="cd-item">
+                                        <span id="minutes"></span>
+                                        <p>Mins</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-6">
+                                    <div class="cd-item">
+                                        <span id="seconds"></span>
+                                        <p>Secs</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
     <div class="container">
-        <div class="row about">
+        <div class="row about-section">
             <div class="col-lg-6 mx-auto">
-                <img src="images/h-about.jpg" alt="">
+                <img src="images/h-about.jpg" alt="picture-about">
             </div>
             <div class="col-lg-6 about-right-content">
+                
                 <h1>About Conference</h1>
                 <p>When I first got into the online advertising business, I was
                     looking for the magical combination that would put my website
@@ -138,155 +160,10 @@
                     </div>
                 </div>
             </div>
-            <div class="member-item">
-                <img src="images/team-member/member-1.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-2.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-3.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-4.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-5.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-6.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-7.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-8.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-9.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
-            </div>
-            <div class="member-item">
-                <img src="images/team-member/member-10.jpg" alt="">
-                <div class="mi-social">
-                    <div class="mi-social-inner">
-                        <a href="#" class="fab fa-facebook-f"></a>
-                        <a href="#" class="fab fa-instagram"></a>
-                        <a href="#" class="fab fa-twitter"></a>
-                        <a href="#" class="fab fa-linkedin-in"></a>
-                    </div>
-                </div>
-                <div class="mi-text">
-                    <h5>Emma Sandoval</h5>
-                    <span>Speaker</span>
-                </div>
+            
+           
+            <div id="showinformember">
+
             </div>
         </section>
         <div class="clear">
@@ -310,159 +187,52 @@
                     <div class="schedule-tab">
                         <ul class="nav nav-tabs">
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <div class="nav-link active">
                                     <h5>Day 1</h5>
                                     <p>May 04,2019</p>
-                                </a>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <div class="nav-link">
                                     <h5>Day 2</h5>
-                                    <p>May 05,2019</p>
-                                </a>
+                                    <p>May 04,2019</p>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <div class="nav-link">
                                     <h5>Day 3</h5>
-                                    <p>May 06,2019</p>
-                                </a>
+                                    <p>May 04,2019</p>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <div class="nav-link">
                                     <h5>Day 4</h5>
-                                    <p>May 07,2019</p>
-                                </a>
+                                    <p>May 04,2019</p>
+                                </div>
                             </li>
                             <li class="nav-item">
-                                <a href="#" class="nav-link active">
+                                <div class="nav-link">
                                     <h5>Day 5</h5>
-                                    <p>May 08,2019</p>
-                                </a>
+                                    <p>May 04,2019</p>
+                                </div>
                             </li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-panea active" id="tabs-1" role="tabpanel">
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="images/schedule/schedule-1.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Dealing with Difficult People</h4>
-                                                    <ul>
-                                                        <li><i class="fa fa-user"></i>John Smith</li>
-                                                        <li><i class="fa fa-envelope"></i>john@Colorlib.com</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li><i class="far fa-clock"></i>08:00 am - 10:00 AM</li>
-                                                    <li><i class="fa fa-map-marker"></i>59 Breanne Canyon Suite, USA
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="images/schedule/schedule-2.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>V7 Digital Photo Printing</h4>
-                                                    <ul>
-                                                        <li><i class="fa fa-user"></i>John Smith</li>
-                                                        <li><i class="fa fa-envelope"></i>john@Colorlib.com</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li><i class="far fa-clock"></i>08:00 am - 10:00 AM</li>
-                                                    <li><i class="fa fa-map-marker"></i>59 Breanne Canyon Suite, USA
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="images/schedule/schedule-3.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Beyond The Naked Eye</h4>
-                                                    <ul>
-                                                        <li><i class="fa fa-user"></i>John Smith</li>
-                                                        <li><i class="fa fa-envelope"></i>john@Colorlib.com</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li><i class="far fa-clock"></i>08:00 am - 10:00 AM</li>
-                                                    <li><i class="fa fa-map-marker"></i>59 Breanne Canyon Suite, USA
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="st-content">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col-lg-3">
-                                                <div class="sc-pic">
-                                                    <img src="images/schedule/schedule-4.jpg" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-5">
-                                                <div class="sc-text">
-                                                    <h4>Influencing The Influencer</h4>
-                                                    <ul>
-                                                        <li><i class="fa fa-user"></i>John Smith</li>
-                                                        <li><i class="fa fa-envelope"></i>john@Colorlib.com</li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-4">
-                                                <ul class="sc-widget">
-                                                    <li><i class="far fa-clock"></i>08:00 am - 10:00 AM</li>
-                                                    <li><i class="fa fa-map-marker"></i>59 Breanne Canyon Suite, USA
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
+                            <div id="output">
+                               
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-------------------------------------------------------------->
     <!--------------------------PRICING------------------------------->
     <!---------------------------------------------------------------->
-    <section class="pricing-section">
+    <section class="pricing-section" style="background-image: url(images/pricing-bg.jpg);">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -473,7 +243,7 @@
                 </div>
             </div>
             <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-7">
+                <div class="col-lg-4 col-md-7 col-sm-10">
                     <div class="price-item">
                         <h4>1 Day Pass</h4>
                         <div class="pi-price">
@@ -486,10 +256,11 @@
                             <li>Keynote talk</li>
                             <li>Talk to the Editors Session</li>
                         </ul>
-                        <a href="#" class="price-btn">Get Ticket <span><i class="fas fa-arrow-right"></i></span></a>
+                        <a href="components/buy_ticket.html" class="price-btn">Get Ticket <span><i
+                                    class="fas fa-arrow-right"></i></span></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-7">
+                <div class="col-lg-4 col-md-7 col-sm-10">
                     <div class="price-item price-item-special">
                         <div class="price-tag">
                             <i class="fa fa-star"></i>
@@ -507,10 +278,11 @@
                             <li>Lunch and Networking</li>
                             <li>Keynote talk</li>
                         </ul>
-                        <a href="#" class="price-btn">Get Ticket <span><i class="fas fa-arrow-right"></i></span></a>
+                        <a href="components/buy_ticket.html" class="price-btn">Get Ticket <span><i
+                                    class="fas fa-arrow-right"></i></span></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-7">
+                <div class="col-lg-4 col-md-7 col-sm-10">
                     <div class="price-item">
                         <h4>Group pass</h4>
                         <div class="pi-price">
@@ -523,7 +295,8 @@
                             <li>Keynote talk</li>
                             <li>Talk to the Editors Session</li>
                         </ul>
-                        <a href="#" class="price-btn">Get Ticket <span><i class="fas fa-arrow-right"></i></span></a>
+                        <a href="components/buy_ticket.html" class="price-btn">Get Ticket <span><i
+                                    class="fas fa-arrow-right"></i></span></a>
                     </div>
                 </div>
             </div>
@@ -544,7 +317,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-6">
-                    <div class="latest-item large-item">
+                    <div class="latest-item large-item" style="background-image: url(images/blog/blog-details/blog-details-hero.jpg);">
                         <div class="li-tag">
                             Maketting
                         </div>
@@ -555,7 +328,7 @@
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-12">
-                    <div class="latest-item" style="background-image: url(/images/blog/latest-b/latest-2.jpg);">
+                    <div class="latest-item" style="background-image: url(images/blog/latest-b/latest-2.jpg);">
                         <div class="li-tag">
                             Experience
                         </div>
@@ -565,7 +338,7 @@
                             <span><i class="fa fa-clock"></i> 19th May, 2019</span>
                         </div>
                     </div>
-                    <div class="latest-item" style="background-image: url(/images/blog/latest-b/latest-3.jpg);">
+                    <div class="latest-item" style="background-image: url(images/blog/latest-b/latest-3.jpg);">
                         <div class="li-tag">
                             Marketing
                         </div>
@@ -584,7 +357,7 @@
 
     <section class="newslatter-section">
         <div class="container">
-            <div class="row newslatter-inner" style="background-image: url(/images/newslatter-bg.jpg);">
+            <div class="row newslatter-inner" style="background-image: url(images/newslatter-bg.jpg);">
                 <div class="col-lg-6">
                     <div class="ni-text">
                         <h3>Subscribe Newsletter</h3>
@@ -634,18 +407,20 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="cs-map">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52901.38789495531!2d-118.19465514866786!3d34.03523211493029!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1$
-                            height=" 400" style="border:0;" allowfullscreen=""></iframe>
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3780.22000189736!2d105.69390451406983!3d18.654121087331333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3139cc2e965f72a5%3A0xfffe6793d9ed22a9!2zNDkgUGhhbiBIdXkgQ2jDuiwgVHJ1bmcgxJDDtCwgVGjDoG5oIHBo4buRIFZpbmgsIE5naOG7hyBBbiwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1595125152543!5m2!1svi!2s"
+                            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0">
+                        </iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-
     <!--FOOTER-->
 
-    <footer class="footer-section">
+    <footer>
         <div class="container">
             <div class="partner-logo owl-carousel">
                 <a href="#" class="pl-table">
@@ -683,76 +458,49 @@
                 <div class="col-lg-12">
                     <div class="footer-text">
                         <div class="ft-logo">
-                            <a href="#" class="footer-logo"><img src="img/footer-logo.png" alt=""></a>
+                            <a href="index.html" class="footer-logo"><img src="images/footer-logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Speakers</a></li>
-                            <li><a href="#">Schedule</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="components/about-us.html">About</a></li>
+                            <li><a href="components/speakers.html">Speakers</a></li>
+                            <li><a href="components/schedule.html">Schedule</a></li>
+                            <li><a href="components/blog.html">Blog</a></li>
+                            <li><a href="components/contact.html">Contact</a></li>
                         </ul>
                         <div class="copyright-text">
                             <p>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                 Copyright &copy;
-                                <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                                template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="""></a>                        </div>
-                        <div class=" ft-social">
-                                    <a href="#"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                <script>document.write(new Date().getFullYear());
+                                </script> All rights reserved | This template is made with by </p>
+                        </div>
+                        <div class="ft-social">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-linkedin-in"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        </div>
-        </a>
-        <a href="#" class="pl-table">
-            <div class="pl-tablecell">
-                <img src="img/partner-logo/logo-6.png" alt="">
-            </div>
-        </a>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="footer-text">
-                    <div class="ft-logo">
-                        <a href="#" class="footer-logo"><img src="img/footer-logo.png" alt=""></a>
-                    </div>
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Speakers</a></li>
-                        <li><a href="#">Schedule</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                    <div class="copyright-text">
-                        <p>
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;
-                            <script>document.write(new Date().getFullYear());</script> All rights reserved | This
-                            template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https:/$
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p></div>
-                        <div class=" ft-social">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
     </footer>
-
-
+    
+    
 
     <script src="js/script.js"></script>
+    <script src="js/getDataEvent.js"></script>
+    <script src="js/getDataSpeaker.js"></script>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
 </body>
 
 </html>

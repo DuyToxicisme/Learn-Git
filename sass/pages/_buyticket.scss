@@ -1,0 +1,96 @@
+.form-buy-ticket{
+	background-color: white;
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+.form-buy-ticket .header-form{
+	padding: 40px;
+	text-align: center;
+}
+.form-buy-ticket .header-form h2{
+	font-weight: bold;
+}
+.form-buy-ticket .header-form p{
+	font-weight: 500;
+	margin-bottom: 20px;
+}
+.form-buy-ticket .body-form{
+	padding: 50px;
+	margin-top: -13vh;
+}
+.form-buy-ticket label{
+	font-weight: 600;
+	margin-top: 20px;
+}
+.form-buy-ticket i{
+	font-size: 7px;
+	color: rgb(255, 29, 29);
+	transform: translate(40%,-70%);
+}
+.form-buy-ticket input{
+	border: 1px solid rgb(223, 223, 223);
+	border-radius: 3px;
+	box-shadow: 0px 0px 20px rgba(137, 142, 196, 0.15);
+	height: 40px;
+	width: 100%;
+	outline: none;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	font-size: 14px;
+}	
+.body-form p{
+	font-size: 13px;
+	color: #a3a3ae;
+	margin-left: 10px;
+}
+.body-form .term-section .check-accept{
+	display: flex;
+}
+.body-form .term-section input{
+	width: 15px;
+	transform: translateY(-25%);
+}
+.body-form .term-section p{
+	font-size: 15px;
+}
+.body-form .term-section .error-checkbox{
+	transform: translateX(-8%);
+	display: none;
+}
+.body-form .term-section .error-checkbox i{
+	font-size: 14px !important;
+	color: red;
+}
+.footer-form{
+	padding: 0 50px 50px;
+}
+.footer-form .footer-title h5{
+	font-size: 17px;
+}
+.footer-form .check-concert{
+	display: flex;
+}
+.footer-form .check-concert p{
+	font-weight: 700;
+	margin-left: 20px;
+}
+.footer-form .check-concert input{
+	width: 17px;
+	transform: translateY(-23%);
+}
+.button-buy-ticket{
+	text-align: center;
+	margin-top: 30px;
+}
+#btn-buy-ticket{
+	font-size: 14px;
+	font-weight: 600;
+	padding: 12px 40px;
+	color: #ffffff;
+	text-align: center;
+	border-radius: 50px;
+	background-image: linear-gradient(to right, #ee8425 0%, #f9488b 100%), linear-gradient(to right, #ee8425 0%, #f9488b 100%);
+	border: none;
+	cursor: pointer;
+}

@@ -1,0 +1,71 @@
+
+.list-events-container{
+	max-width: 1100px;
+	background-color: white;
+	z-index: 10;
+	margin: 110px auto 0;
+}
+.list-speaker-container{
+	max-width: 700px;
+	z-index: 10;
+	margin: 110px auto 0;
+}
+.table-list-event{ 
+	display: table;
+	border: 1px solid black;
+}
+#table-speakers{
+	background: #ffffff;
+	background-size: cover;
+	max-width: 700px;
+}
+#table-speakers{
+	display: table;
+}
+#table-events, #table-speakers{
+	text-align: center;
+	width: 100%;
+}
+#table-events img, #table-speakers img{
+	width: 80px;
+}
+
+#table-events tr th, #table-speakers tr th{
+	padding: 10px;
+	border: 2px solid rgb(207, 207, 207);
+	border-top: none;
+}
+#table-events tr th:first-child,  #table-speakers tr th:first-child{ 
+	border-left: none;
+}
+#table-events tr th:last-child,  #table-speakers tr th:last-child{
+	border-right:none ;
+}
+#table-events tr th i{
+	font-size: 30px;
+}
+#table-events tr td, #table-speakers tr td{
+	padding: 10px;
+	border: 2px solid rgb(195, 195, 195);
+	font-size: 14px;
+}
+#table-speakers tr td a{
+	font-size: 20px;
+}
+#table-events tr td a{
+	font-size: 20px;
+	cursor: pointer;
+}
+#table-events tr:last-child td, #table-speakers tr:last-child td{
+	border-bottom: none;
+}
+
+#table-events tr td:first-child, #table-speakers tr td:first-child{ 
+	border-left: none;
+}
+#table-events tr td:last-child, #table-speakers tr td:last-child{
+	border-right:none ;
+}
+.fa-trash-alt{
+	color: rgb(250, 85, 85);
+}

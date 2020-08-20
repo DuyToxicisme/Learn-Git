@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Ticket</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: rgb(239, 239, 241);">
+    <div class="loading_bg">
+        <div id="loading">
+        </div>
+    </div>
+    <nav class="top-nav">
+        <input type="checkbox" id="check">
+        <label for="check">
+            <i class="fas fa-bars" id="btn-bar"></i>
+            <i class="far fa-window-close" id="btn-cancel"></i>
+        </label>
+        <a href="../index.html"><img src="../images/logo.png" alt=""></a>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="about-us.html">About</a></li>
+            <li><a href="speakers.html">Speakers</a></li>
+            <li><a href="schedule.html">Schedule</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="clear">
+        </div>
+    </nav>
+    <button onclick="topFunction()" id="btn-move-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    <div class="container">
+        <hr style="margin-top: 0;">
+    </div>
+
+    <form action="" class="form-buy-ticket">
+        <div class="header-form">
+            <h2>You need to Buy Tickets?</h2>
+            <p>Fill the details below accurately and we will contact you soon.</p>
+            <hr>
+        </div>
+        <div class="body-form">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="full-name">
+                        <label for="">Full Name</label>
+                        <i class="fas fa-star-of-life"></i>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="first-name">
+                        <input type="text">
+                        <p>First Name</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="last-name">
+                        <input type="text">
+                        <p>Last Name</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="email">
+                        <label for="">E-mail</label>
+                        <i class="fas fa-star-of-life"></i> <br>
+                        <input type="text">
+                        <p>example@example.com</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+                <div class="col-md-6 col-sm-8">
+                    <div class="phone-number">
+                        <label for="">Phone Number</label>
+                        <i class="fas fa-star-of-life"></i> <br>
+                        <input type="text" placeholder="(000) 000-0000">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                </div>
+                <div class="col-lg-12">
+                    <div class="term-section">
+                        <label for="">Term</label>
+                        <i class="fas fa-star-of-life"></i> <br>
+                        <div class="check-accept">
+                            <input type="checkbox" name="" id="">
+                            <p>I accept the terms and conditions</p>
+                        </div>
+                        <div class="error-checkbox">
+                            <i class="fas fa-exclamation-circle">This field is required</i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-form">
+            <div class="footer-title">
+                <h5>Choose Quantity</h5>
+            </div>
+            <div class="check-concert">
+                <input type="checkbox">
+                <p>Concert Ticket</p>             
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    Quantity
+                    <Select id="quantity-ticket" onchange="BillMoney()">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </Select>
+                </div>
+                <div class="col-6">
+                    <h5>$ <span id="price">50</span></h5>
+                </div>
+            </div>
+            <div class="button-buy-ticket">
+                <button id="btn-buy-ticket">Purchase</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="../js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>

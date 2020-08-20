@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manup | Create Event</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/media.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="background-color: rgb(239, 239, 241);">
+
+    <div class="loading_bg">
+        <div id="loading">
+
+        </div>
+    </div>
+
+    <div class="nav-admin-page">
+        <div class="picture-logo">
+            <a href="/index.html"><img src="/images/logo.png" alt="logo"></a>
+        </div>
+        <div class="nav-bar" id="icon-navbar-pageadmin" onclick="showVerticalNav()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-center">
+            <i class="fas fa-search" id="icon-search"></i>
+            <a href="/adminPage.html" class="btn-create">Create Event</a>
+        </div>
+        <div class="nav-notification">
+            <i class="fas fa-bell"></i>
+        </div>
+        <div class="nav-user">
+            <img src="/images/user.jpeg" alt="user" onclick="ShowInforUser()">
+
+        </div>
+        <ul id="infor-user">
+            <li> <img src="/images/user.jpeg" alt="user"> Name User</li>
+            <li><i class="fas fa-user"></i>Profile</li>
+            <li><i class="fas fa-ticket-alt"></i>Create Ticket</li>
+            <li><i class="fas fa-calendar-check"></i>Calendar</li>
+            <li><i class="fas fa-envelope"></i>Inbox</li>
+            <li><i class="fas fa-power-off"></i>Logout</li>
+        </ul>
+        <div class="clear">
+
+        </div>
+    </div>
+    <div class="vertical-nav" id="vertical-nav">
+        <ul>
+            <li class="nav-title">NAVIGATION</li>
+            <li id="list-dash-board"><a href="#">
+                    <i class="fas fa-home"></i>Dash Board</a>
+                <i class="fas fa-angle-right"></i></li>
+            <li id="list-event"><a href="#"><img src="/images/event-icon.png" alt="icon-event"> Event</a>
+                <i class="fas fa-angle-right"></i>
+                <ul class="dropdown-event" id="dropdown-event">
+                    <li><a href="#">Create Event</a></li>
+                    <li><a href="removeEvent.html">Remove Event</a></li>
+                    <li><a href="UpdateEvent.html">Update Event</a></li>
+                </ul>
+            </li>
+            <li id="list-speaker"><a href="#"> <i class="fab fa-speaker-deck"></i> Speaker</a>
+                <i class="fas fa-angle-right"></i>
+                <ul class="dropdown-speaker" id="dropdown-speaker">
+                    <li><a href="/pages/speakers/appendSpeaker.html">Append Speaker</a></li>
+                    <li><a href="/pages/speakers/removeSpeaker.html">Remove Speaker</a></li>
+                </ul>
+            </li>
+            <li id="list-ticket"><a href="#"> <i class="fas fa-ticket-alt"></i> Ticket</a>
+                <i class="fas fa-angle-right"></i>
+                <ul class="dropdown-ticket" id="dropdown-ticket">
+                    <li><a href="/pages/tickets/createTicket.html">Create Ticket</a></li>
+                    <li><a href="/pages/tickets/removeTicket.html">Remove Ticket</a></li>
+                    <li><a href="/pages/tickets/updateTicket.html">Update Ticket</a></li>
+
+                </ul>
+            </li>
+            <li id="list-color"><a href="#"><i class="fas fa-fill"></i> Color</a>
+                <i class="fas fa-angle-right"></i>
+                <ul class="dropdown-color" id="dropdown-color">
+                    <li> <a href="#">Light</a></li>
+                    <li> <a href="#">Dark</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <form action="" id="postDataEvent">
+        <div class="create-event">
+            <h5>Create Event</h5>
+            <hr>
+            <p>General Info</p>
+            
+            <div class="general-info">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="event-title">
+                            <label for="event-title">Event Title</label> <br>
+                            <input type="text" id="event-title">
+                            <span id="errorName" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="speaker">
+                            <label for="speaker">Speaker</label> <br>
+                            <input type="text" id="speaker-name">
+                            <span id="errorNameSpeaker" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="email-speaker">
+                            <label>Email Speaker</label> <br>
+                            <input type="text" id="speaker-email">
+                            <span id="errorEmail" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="type-event">
+                            <label for="type">Type</label> <br>
+                            <select id="type">
+                                <option value="">Appearance or Signing</option>
+                                <option value="">Attraction</option>
+                                <option value="">Class, Training, or Workshop</option>
+                                <option value="">Conference</option>
+                                <option value="">Festival</option>
+                                <option value="">Meeting or Networking Event</option>
+                                <option value="">Seminal</option>
+                                <option value="">Other</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="category-event">
+                            <label for="category">Category</label> <br>
+                            <select id="category">
+                                <option value="">Auto, Boat & Air</option>
+                                <option value="">Family and Education</option>
+                                <option value="">fashion</option>
+                                <option value="">Food & Drink</option>
+                                <option value="">Health & Wellness</option>
+                                <option value="">Music</option>
+                                <option value="">Other</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="location" onchange="ShowFormLocatonEvent()">
+                            <label for="location">Location</label> <br>
+                            <select id="location">
+                                <option value="Online Event">Online Event</option>
+                                <option value="To be announce">Offline Event</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="Event-location">
+                            <label for="">Event Place</label>
+                            <input type="text" id="event-place">
+                            <span id="errorLocation" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="start-time">
+                            <label for="ST-input">Start Time</label>
+                            <input type="text" id="ST-input">
+                            <span id="errorTimeStart" class="error"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="end-time">
+                            <label for="ET-input">End Time</label>
+                            <input type="text" id="ET-input">
+                            <span id="errorTimeEnd" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div id="wrapper">
+                            <input type="file" accept="image/*" id="preview-image">
+                            <img id="output_image" alt="Image Speaker Preview"> <br>
+                            <span id="errorUploadImage" class="error"></span>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="check-out">
+                            <div class="col-12">
+                                <input type="checkbox" id="btn-check" onclick="CheckContent()">
+                                <label for="">Check me out</label>
+                            </div>
+                            <input type="submit" value="Create" id="btn-create">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <button onclick="topFunction()" id="btn-move-top" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <script src="/js/script.js"></script>
+    <script src="/js/postDataEvent.js"></script>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</body>
+
+</html>

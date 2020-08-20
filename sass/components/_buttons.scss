@@ -1,0 +1,44 @@
+.button-basic{
+	font-size: 14px;
+	color: #ffffff;
+	text-align: center;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.btn-ticket{
+	@extend .button-basic;
+	display: inline-block;	
+	font-weight: 600;
+	padding: 12px 40px;
+	background-image: linear-gradient(to right, $color_btn_buy_ticket_1 0%, $color_btn_buy_ticket_2 100%);
+	position: absolute;
+	right: 5%;
+	top: 30px;
+	border-radius: 50px;
+}
+
+.btn-ticket i{
+	transform: rotate(-45deg);
+	margin-right: 5px;
+} 
+
+#btn-move-top {
+	@extend .button-basic;
+	display: none; 
+	position: fixed; 
+	width: 50px;
+	height: 50px;
+	bottom: 10px;
+	right: 10px; 
+	z-index: 999; 
+	background-color: $bg_move_to_top; 
+	padding: 15px; 
+	border-radius: 50%; 
+	transition: all 0.5s;
+}
+header > a:hover, .btn-buy-ticket a:hover{
+    text-decoration: none;
+    color: white;
+}

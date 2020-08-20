@@ -1,0 +1,72 @@
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+
+@import "./base/typography";
+@import "./base/reset";
+
+@import "./components/buttons";
+@import "./components/carousel";
+@import "./components/slider";
+
+@import "./layout/navigation";
+@import "./layout/grid";
+@import "./layout/sidebar";
+@import "./layout/forms";
+@import "./layout/footer";
+@import "./layout/breadcrumb";
+
+@import "./pages/home";
+@import "./pages/about";
+@import "./pages/speaker";
+@import "./pages/schedule";
+@import "./pages/blog";
+@import "./pages/contact";
+@import "./pages/buyticket";
+@import "./pages/admin";
+@import "./pages/pageGet_PutEvent";
+
+@import "./themes/admin";
+@import "./themes/theme";
+
+
+@import "./exampleSASS/mixin.scss";
+// SCSS
+$txt-size: 12px;
+$txt-color: #333;
+$link-color: #979;
+
+.main{
+    font-size: $txt-size;
+    color: $txt-color;
+    a{
+        color: $link-color;
+    }   
+}
+    
+// CSS  
+.main {
+    font-size: 12px;
+    color: #333; 
+}
+.main a {
+    color: #979; 
+}
+
+// nav-test
+.top-nav-test{
+    display: flex;
+    ul{
+        li{
+            margin: 0 15px;
+            list-style: none;
+            a{
+                text-decoration: none;
+                padding: 6px 10px;
+                color: $link-color;
+                font-size: $txt-size;
+            }
+        }
+    }
+}
+
+
